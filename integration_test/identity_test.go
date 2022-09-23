@@ -3,9 +3,8 @@ package integration
 import (
 	"encoding/hex"
 	"fmt"
-	commoncodec "github.com/kaifei-bianjie/common-parser/codec"
-	. "github.com/kaifei-bianjie/iritamod-parser/codec"
-	"github.com/kaifei-bianjie/iritamod-parser/utils"
+	. "github.com/kaifei-bianjie/common-parser/codec"
+	"github.com/kaifei-bianjie/common-parser/utils"
 )
 
 func (s IntegrationTestSuite) TestIdentity() {
@@ -30,7 +29,7 @@ func create(s IntegrationTestSuite) {
 	if err != nil {
 		fmt.Println(err.Error())
 	}
-	authTx, err := commoncodec.GetSigningTx(txBytes)
+	authTx, err := GetSigningTx(txBytes)
 	if err != nil {
 		fmt.Println(err.Error())
 	}
