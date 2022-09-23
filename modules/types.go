@@ -5,13 +5,9 @@ import (
 	"github.com/bianjieai/iritamod/modules/node"
 	"github.com/bianjieai/iritamod/modules/perm"
 	iritaslashing "github.com/bianjieai/iritamod/modules/slashing"
-	sdk "github.com/cosmos/cosmos-sdk/types"
-	slashing "github.com/cosmos/cosmos-sdk/x/slashing/types"
-	models "github.com/kaifei-bianjie/iritamod-parser/types"
 )
 
 const (
-	MsgTypeUnjail          = "unjail"
 	MsgTypeUnjailValidator = "unjail_validator"
 
 	MsgTypeUpdateIdentity = "update_identity"
@@ -31,18 +27,6 @@ const (
 )
 
 type (
-	MsgDocInfo struct {
-		DocTxMsg models.TxMsg
-		Addrs    []string
-		Signers  []string
-	}
-	SdkMsg sdk.Msg
-	Msg    models.Msg
-
-	Coin models.Coin
-
-	Coins []*Coin
-
 	MsgCreateIdentity = identity.MsgCreateIdentity
 	MsgUpdateIdentity = identity.MsgUpdateIdentity
 
@@ -57,6 +41,5 @@ type (
 	MsgBlockAccount   = perm.MsgBlockAccount
 	MsgUnblockAccount = perm.MsgUnblockAccount
 
-	MsgUnjail          = slashing.MsgUnjail
 	MsgUnjailValidator = iritaslashing.MsgUnjailValidator
 )

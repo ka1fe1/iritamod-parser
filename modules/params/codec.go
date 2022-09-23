@@ -1,8 +1,8 @@
 package params
 
 import (
-	"github.com/cosmos/cosmos-sdk/x/params"
-	"github.com/kaifei-bianjie/iritamod-parser/codec"
+	"github.com/bianjieai/iritamod/modules/params"
+	"github.com/kaifei-bianjie/common-parser/codec"
 )
 
 func init() {

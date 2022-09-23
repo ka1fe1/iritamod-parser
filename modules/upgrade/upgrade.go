@@ -1,22 +1,21 @@
 package upgrade
 
 import (
-	"github.com/cosmos/cosmos-sdk/types"
-	. "github.com/kaifei-bianjie/iritamod-parser/modules"
+	sdk "github.com/cosmos/cosmos-sdk/types"
+	. "github.com/kaifei-bianjie/common-parser/modules"
 )
 
-type upgradeClient struct {
+type UpgradeClient struct {
 }
 
-func NewClient() upgradeClient {
-	return upgradeClient{}
+func NewClient() UpgradeClient {
+	return UpgradeClient{}
 }
 
-func (upgrade upgradeClient) HandleTxMsg(v types.Msg) (MsgDocInfo, bool) {
+func (upgrade UpgradeClient) HandleTxMsg(v sdk.Msg) (MsgDocInfo, bool) {
 	var (
 		msgDocInfo MsgDocInfo
 	)
-	ok := false
 
-	return msgDocInfo, ok
+	return msgDocInfo, false
 }

@@ -2,6 +2,7 @@ package perm
 
 import (
 	"github.com/bianjieai/iritamod/modules/perm/types"
+	. "github.com/kaifei-bianjie/common-parser/modules"
 	. "github.com/kaifei-bianjie/iritamod-parser/modules"
 )
 

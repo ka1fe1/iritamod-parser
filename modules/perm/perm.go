@@ -1,18 +1,19 @@
 package perm
 
 import (
-	"github.com/cosmos/cosmos-sdk/types"
+	sdk "github.com/cosmos/cosmos-sdk/types"
+	. "github.com/kaifei-bianjie/common-parser/modules"
 	. "github.com/kaifei-bianjie/iritamod-parser/modules"
 )
 
-type permClient struct {
+type PermClient struct {
 }
 
-func NewClient() permClient {
-	return permClient{}
+func NewClient() PermClient {
+	return PermClient{}
 }
 
-func (nft permClient) HandleTxMsg(v types.Msg) (MsgDocInfo, bool) {
+func (nft PermClient) HandleTxMsg(v sdk.Msg) (MsgDocInfo, bool) {
 	switch msg := v.(type) {
 	case *MsgAssignRoles:
 		docMsg := DocMsgAssignRoles{}

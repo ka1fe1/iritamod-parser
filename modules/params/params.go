@@ -1,22 +1,20 @@
 package params
 
 import (
-	"github.com/cosmos/cosmos-sdk/types"
-	. "github.com/kaifei-bianjie/iritamod-parser/modules"
+	sdk "github.com/cosmos/cosmos-sdk/types"
+	. "github.com/kaifei-bianjie/common-parser/modules"
 )
 
-type paramsClient struct {
+type ParamsClient struct {
 }
 
-func NewClient() paramsClient {
-	return paramsClient{}
+func NewClient() ParamsClient {
+	return ParamsClient{}
 }
 
-func (params paramsClient) HandleTxMsg(v types.Msg) (MsgDocInfo, bool) {
+func (params ParamsClient) HandleTxMsg(v sdk.Msg) (MsgDocInfo, bool) {
 	var (
 		msgDocInfo MsgDocInfo
 	)
-	ok := false
-
-	return msgDocInfo, ok
+	return msgDocInfo, false
 }

@@ -1,8 +1,8 @@
 package upgrade
 
 import (
-	"github.com/cosmos/cosmos-sdk/x/upgrade"
-	"github.com/kaifei-bianjie/iritamod-parser/codec"
+	"github.com/bianjieai/iritamod/modules/upgrade"
+	"github.com/kaifei-bianjie/common-parser/codec"
 )
 
 func init() {

@@ -2,21 +2,19 @@ package slashing
 
 import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
+	. "github.com/kaifei-bianjie/common-parser/modules"
 	. "github.com/kaifei-bianjie/iritamod-parser/modules"
 )
 
-type slashingClient struct {
+type SlashingClient struct {
 }
 
-func NewClient() slashingClient {
-	return slashingClient{}
+func NewClient() SlashingClient {
+	return SlashingClient{}
 }
 
-func (slashing slashingClient) HandleTxMsg(v sdk.Msg) (MsgDocInfo, bool) {
+func (slashing SlashingClient) HandleTxMsg(v sdk.Msg) (MsgDocInfo, bool) {
 	switch msg := v.(type) {
-	case *MsgUnjail:
-		docMsg := DocTxMsgUnjail{}
-		return docMsg.HandleTxMsg(msg), true
 	case *MsgUnjailValidator:
 		docMsg := DocTxMsgUnjailValidator{}
 		return docMsg.HandleTxMsg(msg), true

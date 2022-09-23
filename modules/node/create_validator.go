@@ -1,6 +1,7 @@
 package node
 
 import (
+	. "github.com/kaifei-bianjie/common-parser/modules"
 	. "github.com/kaifei-bianjie/iritamod-parser/modules"
 )
 

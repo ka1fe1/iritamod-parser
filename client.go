@@ -1,6 +1,7 @@
-package msg_parser
+package iritamod_parser
 
 import (
+	common "github.com/kaifei-bianjie/common-parser"
 	"github.com/kaifei-bianjie/iritamod-parser/codec"
 	"github.com/kaifei-bianjie/iritamod-parser/modules/identity"
 	"github.com/kaifei-bianjie/iritamod-parser/modules/params"
@@ -10,11 +11,11 @@ import (
 )
 
 type MsgClient struct {
-	Params   Client
-	Slashing Client
-	Upgrade  Client
-	Identity Client
-	Perm     Client
+	Params   common.Client
+	Slashing common.Client
+	Upgrade  common.Client
+	Identity common.Client
+	Perm     common.Client
 }
 
 func NewMsgClient() MsgClient {

@@ -1,6 +1,7 @@
 package node
 
 import (
+	. "github.com/kaifei-bianjie/common-parser/modules"
 	. "github.com/kaifei-bianjie/iritamod-parser/modules"
 )
 
@@ -10,7 +11,7 @@ type DocMsgRemoveValidator struct {
 }
 
 func (m *DocMsgRemoveValidator) GetType() string {
-	return MsgTypeUpdateValidator
+	return MsgTypeRemoveValidator
 }
 
 func (m *DocMsgRemoveValidator) BuildMsg(v interface{}) {
