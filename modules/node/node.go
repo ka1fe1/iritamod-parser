@@ -28,7 +28,7 @@ func (nft NodeClient) HandleTxMsg(v types.Msg) (MsgDocInfo, bool) {
 		msgDocInfo = docMsg.HandleTxMsg(msg)
 		break
 	case *MsgNodeRemove:
-		docMsg := DocMsgRevokeNode{}
+		docMsg := DocMsgRemoveValidator{}
 		msgDocInfo = docMsg.HandleTxMsg(msg)
 		break
 	case *MsgNodeGrant:
