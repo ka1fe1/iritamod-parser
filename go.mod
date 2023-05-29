@@ -3,7 +3,7 @@ module github.com/kaifei-bianjie/iritamod-parser
 go 1.16
 
 require (
-	github.com/bianjieai/iritamod v1.2.1-0.20220809083453-a38b88e9aac1
+	github.com/bianjieai/iritamod v1.2.1-0.20230525103414-2c6d235c2ff1
 	github.com/cosmos/cosmos-sdk v0.45.5-0.20220523154235-2921a1c3c918
 	github.com/kaifei-bianjie/common-parser v0.0.0-20220923023138-65dfc81a8ff5
 	github.com/stretchr/testify v1.7.5

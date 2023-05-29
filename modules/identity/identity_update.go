@@ -44,7 +44,6 @@ func (m *DocMsgUpdateIdentity) HandleTxMsg(v SdkMsg) MsgDocInfo {
 
 	msg := v.(*MsgUpdateIdentity)
 	addrs = append(addrs, msg.Owner)
-	addrs = append(addrs, msg.Owner)
 	handler := func() (Msg, []string) {
 		return m, addrs
 	}
