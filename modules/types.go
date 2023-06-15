@@ -2,9 +2,9 @@ package msgs
 
 import (
 	"github.com/bianjieai/iritamod/modules/identity"
-	"github.com/bianjieai/iritamod/modules/layer2"
 	"github.com/bianjieai/iritamod/modules/node"
 	"github.com/bianjieai/iritamod/modules/perm"
+	sidechain "github.com/bianjieai/iritamod/modules/side-chain"
 	iritaslashing "github.com/bianjieai/iritamod/modules/slashing"
 )
 
@@ -25,17 +25,9 @@ const (
 	MsgTypeGrantNode       = "grant_node"       // type for MsgGrantNode
 	MsgTypeRevokeNode      = "revoke_node"      // type for MsgRevokeNode
 
-	MsgTypeCreateL2BlockHeader = "create_l2_block_header"
-	MsgTypeCreateL2Space       = "create_l2_space"
-	MsgTypeCreateNFTs          = "create_nfts"
-	MsgTypeDeleteNFTs          = "delete_nfts"
-	MsgTypeDepositClassForNFT  = "deposit_class_for_nft"
-	MsgTypeDepositTokenForNFT  = "deposit_token_for_nft"
-	MsgTypeTransferL2Space     = "transfer_l2_space"
-	MsgTypeUpdateClassesForNFT = "update_classes_for_nft"
-	MsgTypeUpdateNFTs          = "update_nfts"
-	MsgTypeWithdrawClassForNFT = "withdraw_class_for_nft"
-	MsgTypeWithdrawTokenForNFT = "withdraw_token_for_nft"
+	MsgTypeCreateBlockHeader = "create_block_header"
+	MsgTypeCreateSpace       = "create_space"
+	MsgTypeTransferSpace     = "transfer_space"
 )
 
 type (
@@ -55,15 +47,7 @@ type (
 
 	MsgUnjailValidator = iritaslashing.MsgUnjailValidator
 
-	MsgCreateL2BlockHeader = layer2.MsgCreateL2BlockHeader
-	MsgCreateL2Space       = layer2.MsgCreateL2Space
-	MsgCreateNFTs          = layer2.MsgCreateNFTs
-	MsgDeleteNFTs          = layer2.MsgDeleteNFTs
-	MsgDepositClassForNFT  = layer2.MsgDepositClassForNFT
-	MsgDepositTokenForNFT  = layer2.MsgDepositTokenForNFT
-	MsgTransferL2Space     = layer2.MsgTransferL2Space
-	MsgUpdateClassesForNFT = layer2.MsgUpdateClassesForNFT
-	MsgUpdateNFTs          = layer2.MsgUpdateNFTs
-	MsgWithdrawClassForNFT = layer2.MsgWithdrawClassForNFT
-	MsgWithdrawTokenForNFT = layer2.MsgWithdrawTokenForNFT
+	MsgCreateBlockHeader = sidechain.MsgCreateBlockHeader
+	MsgCreateSpace       = sidechain.MsgCreateSpace
+	MsgTransferSpace     = sidechain.MsgTransferSpace
 )
