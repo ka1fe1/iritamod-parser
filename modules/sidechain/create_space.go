@@ -1,31 +1,31 @@
-package layer2
+package sidechain
 
 import (
 	. "github.com/kaifei-bianjie/common-parser/modules"
 	. "github.com/kaifei-bianjie/iritamod-parser/modules"
 )
 
-type DocMsgCreateL2Space struct {
+type DocMsgCreateSpace struct {
 	Name   string `bson:"name"`
 	Uri    string `bson:"uri"`
 	Sender string `bson:"sender"`
 }
 
-func (m *DocMsgCreateL2Space) GetType() string {
-	return MsgTypeCreateL2Space
+func (m *DocMsgCreateSpace) GetType() string {
+	return MsgTypeCreateSpace
 }
 
-func (m *DocMsgCreateL2Space) BuildMsg(v interface{}) {
-	msg := v.(*MsgCreateL2Space)
+func (m *DocMsgCreateSpace) BuildMsg(v interface{}) {
+	msg := v.(*DocMsgCreateSpace)
 	m.Name = msg.Name
 	m.Uri = msg.Uri
 	m.Sender = msg.Sender
 }
 
-func (m *DocMsgCreateL2Space) HandleTxMsg(v SdkMsg) MsgDocInfo {
+func (m *DocMsgCreateSpace) HandleTxMsg(v SdkMsg) MsgDocInfo {
 	var addrs []string
 
-	msg := v.(*MsgCreateL2Space)
+	msg := v.(*MsgCreateSpace)
 	addrs = append(addrs, msg.Sender)
 	handler := func() (Msg, []string) {
 		return m, addrs
