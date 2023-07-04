@@ -16,7 +16,7 @@ func (m *DocMsgCreateSpace) GetType() string {
 }
 
 func (m *DocMsgCreateSpace) BuildMsg(v interface{}) {
-	msg := v.(*DocMsgCreateSpace)
+	msg := v.(*MsgCreateSpace)
 	m.Name = msg.Name
 	m.Uri = msg.Uri
 	m.Sender = msg.Sender
